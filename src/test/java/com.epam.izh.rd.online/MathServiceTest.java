@@ -31,14 +31,14 @@ public class MathServiceTest {
     @Test
     @DisplayName("Тест метода MathService.maxFrom(int value1, int value2)")
     void testMaxFrom() {
-        assertEquals(2, mathService.maxFrom(-10, 2), "Для входных параметров: " + -10 + " " + 2);
+        assertEquals(-1, mathService.maxFrom(-10, -1), "Для входных параметров: " + -10 + " " + -1);
     }
 
     @Test
     @DisplayName("Тест метода MathService.maxFrom(int[] values)")
     void testMaxFromArray() {
-        int[] param = {1, 3, 5, 7, 8};
-        assertEquals(8, mathService.maxFrom(param), "Для входных параметров: " + Arrays.toString(param));
+        int[] param = {1, 3, 5, 7, -1};
+        assertEquals(-1, mathService.maxFrom(param), "Для входных параметров: " + Arrays.toString(param));
     }
 
     @ParameterizedTest
